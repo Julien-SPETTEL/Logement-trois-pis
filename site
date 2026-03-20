@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location Appartements ★★★ — Trois-Épis, Haut-Rhin</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest: #1B3A2D;
+    --pine:   #2E5D46;
+    --sage:   #4E8C6A;
+    --mist:   #A8C5B5;
+    --snow:   #F4F1EC;
+    --gold:   #C8973A;
+    --cream:  #FBF8F3;
+    --text:   #1A1A1A;
+    --muted:  #6B7B74;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(170deg, var(--forest) 0%, var(--pine) 55%, #3A6E52 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(200, 151, 58, 0.2);
+    border: 1px solid rgba(200, 151, 58, 0.4);
+    color: #E8B865;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .stars { color: var(--gold); letter-spacing: 2px; }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    color: #fff;
+    line-height: 1.15;
+    max-width: 820px;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: #E8C97A;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.72);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .hero-cta:hover { background: #B5852E; transform: translateY(-2px); }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.25);
+    animation: scrollline 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollline { 0%,100%{opacity:0;transform:scaleY(0.4)} 50%{opacity:1;transform:scaleY(1)} }
+
+  /* ── SECTION COMMUNE ── */
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1060px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    color: var(--forest);
+    line-height: 1.2;
+    max-width: 600px;
+    margin-bottom: 1rem;
+  }
+  .section-body {
+    color: var(--muted);
+    max-width: 560px;
+    font-size: 1rem;
+  }
+
+  /* ── CHIFFRES CLÉS ── */
+  .stats {
+    background: var(--forest);
+    color: #fff;
+    padding: 4rem 2rem;
+  }
+  .stats-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 3rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #E8C97A;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── APPARTS ── */
+  .apparts { background: var(--snow); }
+  .appart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .appart-card {
+    background: #fff;
+    border: 1px solid #E0DDD8;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .appart-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,58,45,0.08); }
+
+  .card-header {
+    background: var(--pine);
+    padding: 1.8rem 1.5rem 1.4rem;
+    position: relative;
+  }
+  .card-type {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  .card-epis {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(200,151,58,0.25);
+    border: 1px solid rgba(200,151,58,0.5);
+    color: #E8C97A;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 2px;
+  }
+  .card-body { padding: 1.4rem 1.5rem 1.8rem; }
+  .card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+  }
+  .card-features li {
+    font-size: 0.9rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--sage);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .card-tag {
+    display: inline-block;
+    background: #EDF4F0;
+    color: var(--pine);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin: 0 4px 4px 0;
+  }
+
+  /* ── ENVIRONNEMENT ── */
+  .env-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  @media (max-width: 720px) { .env-split { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .env-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 2rem;
+  }
+  .env-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .env-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--pine);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .env-card {
+    background: var(--forest);
+    border-radius: 16px;
+    padding: 2.8rem 2.5rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  .env-card blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: #E8C97A;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .env-card cite {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-style: normal;
+  }
+
+  /* ── SAISON ── */
+  .saison { background: var(--snow); }
+  .saison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .saison-card {
+    background: #fff;
+    border: 1px solid #E0DDD8;
+    border-radius: 10px;
+    padding: 1.6rem;
+    text-align: center;
+  }
+  .saison-icon { font-size: 2rem; margin-bottom: 0.7rem; display: block; }
+  .saison-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--forest);
+    margin-bottom: 0.4rem;
+  }
+  .saison-desc { font-size: 0.85rem; color: var(--muted); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--forest); color: #fff; text-align: center; }
+  .contact .section-title { color: #fff; margin: 0 auto 1rem; }
+  .contact .section-body { color: rgba(255,255,255,0.65); margin: 0 auto 2.5rem; }
+  .contact-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 2.5rem 3.5rem;
+  }
+  .contact-phone {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #E8C97A;
+    letter-spacing: 0.04em;
+  }
+  .contact-hint { font-size: 0.82rem; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; text-transform: uppercase; }
+  .contact-cta {
+    background: var(--gold);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+  .contact-cta:hover { background: #B5852E; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 1.8rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+  footer strong { color: rgba(255,255,255,0.55); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge"><span class="stars">★★★</span>&nbsp; Classé 3 épis</div>
+  <h1>Appartements de montagne<br><em>à Trois-Épis</em></h1>
+  <p class="hero-sub">8 appartements F2 & F3 · Station climatique du Haut-Rhin · Disponibles automne 2026</p>
+  <a href="#appartements" class="hero-cta">Découvrir les logements</a>
+  <div class="scroll-hint">Défiler</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">8</div>
+      <div class="stat-label">Appartements disponibles</div>
+    </div>
+    <div>
+      <div class="stat-num">★★★</div>
+      <div class="stat-label">Classement 3 épis</div>
+    </div>
+    <div>
+      <div class="stat-num">670m</div>
+      <div class="stat-label">Altitude</div>
+    </div>
+    <div>
+      <div class="stat-num">Automne<br style="line-height:0.5"> 2026</div>
+      <div class="stat-label">Disponibilité</div>
+    </div>
+  </div>
+</div>
+
+<!-- APPARTEMENTS -->
+<section class="apparts" id="appartements">
+  <div class="container">
+    <p class="section-label">Nos logements</p>
+    <h2 class="section-title">Confort classé 3 épis face aux Vosges</h2>
+    <p class="section-body">Chaque appartement est classé 3 épis par Gîtes de France — un gage de qualité, de confort et d'équipements soignés.</p>
+
+    <div class="appart-grid">
+      <!-- F2 -->
+      <div class="appart-card">
+        <div class="card-header">
+          <div class="card-type">Type de logement</div>
+          <div class="card-title">F2</div>
+          <div class="card-epis">★★★</div>
+        </div>
+        <div class="card-body">
+          <ul class="card-features">
+            <li>Séjour / cuisine équipée</li>
+            <li>1 chambre double</li>
+            <li>Salle de bain complète</li>
+            <li>Balcon ou terrasse</li>
+            <li>2 à 3 personnes</li>
+          </ul>
+          <span class="card-tag">Wifi</span>
+          <span class="card-tag">Linge fourni</span>
+          <span class="card-tag">Parking</span>
+        </div>
+      </div>
+
+      <!-- F3 -->
+      <div class="appart-card">
+        <div class="card-header" style="background: #1B3A2D;">
+          <div class="card-type">Type de logement</div>
+          <div class="card-title">F3</div>
+          <div class="card-epis">★★★</div>
+        </div>
+        <div class="card-body">
+          <ul class="card-features">
+            <li>Grand séjour / cuisine équipée</li>
+            <li>2 chambres (dont une double)</li>
+            <li>Salle de bain + WC séparé</li>
+            <li>Balcon avec vue sur le massif</li>
+            <li>4 à 5 personnes</li>
+          </ul>
+          <span class="card-tag">Wifi</span>
+          <span class="card-tag">Linge fourni</span>
+          <span class="card-tag">Parking</span>
+          <span class="card-tag">Lave-vaisselle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENVIRONNEMENT -->
+<section>
+  <div class="container">
+    <div class="env-split">
+      <div>
+        <p class="section-label">Le cadre</p>
+        <h2 class="section-title">Trois-Épis, perle des Vosges alsaciennes</h2>
+        <ul class="env-list">
+          <li>
+            <div class="env-icon">🌲</div>
+            <div><strong style="color: var(--forest);">Forêts & randonnées</strong><br>Des dizaines de sentiers balisés au départ du village</div>
+          </li>
+          <li>
+            <div class="env-icon">🏔️</div>
+            <div><strong style="color: var(--forest);">Panorama exceptionnel</strong><br>Vue sur la plaine d'Alsace, la Forêt-Noire et les Alpes par temps clair</div>
+          </li>
+          <li>
+            <div class="env-icon">🍷</div>
+            <div><strong style="color: var(--forest);">Route des Vins à 10 min</strong><br>Kaysersberg, Riquewihr et Colmar à proximité</div>
+          </li>
+          <li>
+            <div class="env-icon">🌿</div>
+            <div><strong style="color: var(--forest);">Station climatique officielle</strong><br>Air pur des Vosges, reconnue pour ses bienfaits</div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="env-card">
+          <blockquote>"Un balcon sur l'Alsace, au cœur des forêts vosgiennes."</blockquote>
+          <p>À 670 m d'altitude, Trois-Épis offre un air vivifiant, une nature préservée et une situation idéale pour explorer le vignoble alsacien, les sentiers GR et les villages médiévaux du piémont.</p>
+          <br>
+          <cite>Commune de Trois-Épis — Haut-Rhin (68)</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAISONS -->
+<section class="saison" id="saisons">
+  <div class="container">
+    <p class="section-label">Toutes les saisons</p>
+    <h2 class="section-title">Un séjour ressourçant en toute saison</h2>
+    <p class="section-body">Les appartements sont disponibles à partir de l'automne 2026. Chaque saison offre son ambiance unique.</p>
+
+    <div class="saison-grid">
+      <div class="saison-card">
+        <span class="saison-icon">🍂</span>
+        <div class="saison-title">Automne</div>
+        <div class="saison-desc">Feuillages flamboyants, vendanges, champignons, air cristallin</div>
+      </div>
+      <div class="saison-card">
+        <span class="saison-icon">❄️</span>
+        <div class="saison-title">Hiver</div>
+        <div class="saison-desc">Marchés de Noël alsaciens, ski de fond, paysages enneigés</div>
+      </div>
+      <div class="saison-card">
+        <span class="saison-icon">🌸</span>
+        <div class="saison-title">Printemps</div>
+        <div class="saison-desc">Floraisons, premiers randonneurs, douceur du piémont vosgien</div>
+      </div>
+      <div class="saison-card">
+        <span class="saison-icon">☀️</span>
+        <div class="saison-title">Été</div>
+        <div class="saison-desc">Fraîcheur en altitude, festival de Colmar, vélo, baignades</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="section-label" style="color: var(--mist);">Nous contacter</p>
+    <h2 class="section-title">Réservez votre séjour</h2>
+    <p class="section-body">Disponibilités à partir de l'automne 2026. Contactez-nous pour connaître les tarifs et les dates libres.</p>
+    <div class="contact-box">
+      <div class="contact-hint">Disponibilité à partir de</div>
+      <div class="contact-phone">Automne 2026</div>
+      <div class="contact-hint">Téléphone disponible prochainement</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Appartements ★★★ — Trois-Épis</strong> &nbsp;·&nbsp; Station climatique du Haut-Rhin &nbsp;·&nbsp; Classés 3 épis
+</footer>
+
+</body>
+</html>
